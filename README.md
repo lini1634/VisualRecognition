@@ -18,14 +18,18 @@
 
 ## 본 과정을 통해 실습하는 내용
 - 1주차 실습1
-  - <img src="https://github.com/hyj378/open_cv_basic/blob/master/ANY_0207213757.gif" width="300">
+  - 물체 검출기
+  <img src="https://github.com/hyj378/open_cv_basic/blob/master/ANY_0207213757.gif" width="300">
 - 1주차 실습2
+  - 파노라마 스티칭
 - 1주차 실습3
-  - <img src="https://user-images.githubusercontent.com/44772344/52432205-38fb9a00-2b4d-11e9-935b-47eeedaf450d.gif" width="300">
+  - 스티칭
+  <img src="https://user-images.githubusercontent.com/44772344/52432205-38fb9a00-2b4d-11e9-935b-47eeedaf450d.gif" width="300">
 - 2주차 실습1
-  - 손글씨 맞추기
-  - <img src="https://user-images.githubusercontent.com/11758940/57967505-be87b500-799a-11e9-9523-576c0c8fedcb.gif" width="300">
+  - 손글씨 분류기
+  <img src="https://user-images.githubusercontent.com/11758940/57967505-be87b500-799a-11e9-9523-576c0c8fedcb.gif" width="300">
 - 2주차 실습2
-  - <img src="https://user-images.githubusercontent.com/11758940/57967581-ec212e00-799b-11e9-92df-f914338185b6.jpg" width="300">
+  - 얼굴 검출기
+  <img src="https://user-images.githubusercontent.com/11758940/57967581-ec212e00-799b-11e9-92df-f914338185b6.jpg" width="300">
  
 
