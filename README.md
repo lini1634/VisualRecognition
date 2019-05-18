@@ -23,7 +23,7 @@
 - 1주차 실습2
   - 파노라마 스티칭
 - 1주차 실습3
-  - 스티칭
+  - 오토 스티칭
   <img src="https://user-images.githubusercontent.com/44772344/52432205-38fb9a00-2b4d-11e9-935b-47eeedaf450d.gif" width="300">
 - 2주차 실습1
   - 손글씨 분류기
