@@ -16,7 +16,7 @@
 
 
 
-## 본 과정을 통해 실습하는 내용
+## 실습 한눈에 보기
 - 1주차 실습1
   - 물체 검출기
   <img src="https://user-images.githubusercontent.com/11758940/57967641-6ea9ed80-799c-11e9-8a6a-b1e8a26b24ee.gif" width="300">
@@ -34,3 +34,5 @@
   <img src="https://user-images.githubusercontent.com/11758940/57967581-ec212e00-799b-11e9-92df-f914338185b6.jpg" width="300">
  
 
+## 포토제닉
+- [](https://www.instagram.com/p/BuMIgFMnfL7/?utm_source=ig_web_copy_link)
