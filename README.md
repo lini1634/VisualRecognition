@@ -22,6 +22,7 @@
   <img src="https://user-images.githubusercontent.com/11758940/57967641-6ea9ed80-799c-11e9-8a6a-b1e8a26b24ee.gif" width="300">
 - 1주차 실습2
   - 파노라마 스티칭
+  <img src="https://user-images.githubusercontent.com/11758940/57967712-3c4cc000-799d-11e9-92ea-0f01ea45559e.jpg" width="300">
 - 1주차 실습3
   - 오토 스티칭
   <img src="https://user-images.githubusercontent.com/44772344/52432205-38fb9a00-2b4d-11e9-935b-47eeedaf450d.gif" width="300">
