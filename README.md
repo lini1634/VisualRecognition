@@ -19,7 +19,7 @@
 ## 본 과정을 통해 실습하는 내용
 - 1주차 실습1
   - 물체 검출기
-  <img src="https://github.com/hyj378/open_cv_basic/blob/master/ANY_0207213757.gif" width="300">
+  <img src="https://user-images.githubusercontent.com/11758940/57967641-6ea9ed80-799c-11e9-8a6a-b1e8a26b24ee.gif" width="300">
 - 1주차 실습2
   - 파노라마 스티칭
 - 1주차 실습3
