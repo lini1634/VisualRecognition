@@ -23,3 +23,6 @@
 
 - 1주차 실습3
   - <img src="https://user-images.githubusercontent.com/44772344/52432205-38fb9a00-2b4d-11e9-935b-47eeedaf450d.gif" width="300">
+- 2주차 실습1
+  - <img src="https://user-images.githubusercontent.com/11758940/57967505-be87b500-799a-11e9-9523-576c0c8fedcb.gif" width="300">
+  
