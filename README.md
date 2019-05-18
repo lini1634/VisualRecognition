@@ -35,4 +35,4 @@
  
 
 ## 포토제닉
-- [](https://www.instagram.com/p/BuMIgFMnfL7/?utm_source=ig_web_copy_link)
+- [강의사진들](https://www.instagram.com/p/BuMIgFMnfL7/?utm_source=ig_web_copy_link)
