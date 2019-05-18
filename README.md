@@ -16,4 +16,10 @@
 
 
 
+## 본 과정을 통해 실습하는 내용
+- 1주차 실습1
+  - <img src="https://github.com/hyj378/open_cv_basic/blob/master/ANY_0207213757.gif" width="300">
+- 1주차 실습2
 
+- 1주차 실습3
+  - <img src="https://user-images.githubusercontent.com/44772344/52432205-38fb9a00-2b4d-11e9-935b-47eeedaf450d.gif" width="300">
