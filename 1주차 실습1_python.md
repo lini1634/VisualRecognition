@@ -1,5 +1,4 @@
 ```
-import numpy as np
 import cv2
 
 def correspondence_problem(factor):
@@ -57,5 +56,5 @@ factor: matches의 각 멤버에서 1순위 매칭결과가 k순위 매칭결과
 cv2.drawKeyPoints(): function which draws the small circles on the locations of keypoints.
 cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS: it will draw a circle with size of keypoint and it will even show its orientation.
 
-
++ detectAndCompute(grayimg): grayimg에서 keypoint와 descriptor 한번에 계산하고 리턴
 
