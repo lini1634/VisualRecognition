@@ -47,7 +47,7 @@ correspondence_problem(0.7)
 
 
 ---------------------------------------------------------------------------------------------------
-__pip install opencv-python__
+__pip install opencv-python__  
 __pip install opencv-contrib-python__
 
 <corresponding problem>: Detection -> Description -> Matching
