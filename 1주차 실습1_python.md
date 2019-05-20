@@ -1,3 +1,4 @@
+```
 import numpy as np
 import cv2
 
@@ -43,5 +44,5 @@ def correspondence_problem(factor):
     cv2.destroyAllwindows()
     
 correspondence_problem(0.7)
-    
+```    
     
