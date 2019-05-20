@@ -76,11 +76,11 @@ kp1=sift.detect(img1,None)
     #sift의 detect를 사용하여 img1으로부터 kp1반환  
 kp1,des1 = sift.compute(img1,kp1)    
     #sift의 compute를 사용하여 img1, kp1으로부터 descriptor를 계산하여 kp1과 des1 반환  
-+(detectAndCompute(grayimg): grayimg에서 keypoint와 descriptor 한번에 계산하고 리턴)  
++ (detectAndCompute(grayimg): grayimg에서 keypoint와 descriptor 한번에 계산하고 리턴)  
 
 FLANN 매칭을 위해 필요한 인자  
-+index_params=dict(algorithm=FlANN_INDEX_KDTREE,trees=5)  
-+search_params=dict(checks=50): feature matching을 위한 반복 횟수. checks 값이 커지면 정확한 결과값이 나오지만 속도가 느려진다   
++ index_params=dict(algorithm=FlANN_INDEX_KDTREE,trees=5)  
++ search_params=dict(checks=50): feature matching을 위한 반복 횟수. checks 값이 커지면 정확한 결과값이 나오지만 속도가 느려진다   
 matches=flann.knnMatch(des1,des2,k=2) #k=2 2번째로 가까운 결과까지 매칭    
 factor: matches의 각 멤버에서 1순위 매칭결과가 k순위 매칭결과의 factor로 주어진 비율보다 더 가까운 값만을 취한다.  
 
