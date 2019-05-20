@@ -47,10 +47,8 @@ correspondence_problem(0.7)
 
 
 ---------------------------------------------------------------------------------------------------
-__pip install opencv-python__  
-__pip install opencv-contrib-python__
 
-<corresponding problem>: Detection -> Description -> Matching
+__corresponding problem: Detection -> Description -> Matching__
 
 1.	Detection ->특징점 위치 파악
   
@@ -68,6 +66,8 @@ __pip install opencv-contrib-python__
         kd트리: 우선순위 큐와 백트래킹을 이용하여 거리가 가까운 노드부터 탐색
 
 ----------------------------------------------------------------------------------------------------
+pip install opencv-python 설치  
+pip install opencv-contrib-python 설치   
 
 sift=cv2.xfeatures2d.SIFT_create()
     #sift에 대한 함수 제공
