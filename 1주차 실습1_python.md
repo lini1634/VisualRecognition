@@ -69,16 +69,16 @@ __corresponding problem: Detection -> Description -> Matching__
 pip install opencv-python 설치  
 pip install opencv-contrib-python 설치   
 
-sift=cv2.xfeatures2d.SIFT_create()
-    #sift에 대한 함수 제공
-kp1=sift.detect(img1,None) 
-    #sift의 detect를 사용하여 img1으로부터 kp1반환
-kp1,des1 = sift.compute(img1,kp1)  
-    #sift의 compute를 사용하여 img1, kp1으로부터 descriptor를 계산하여 kp1과 des1 반환
-(detectAndCompute(grayimg): grayimg에서 keypoint와 descriptor 한번에 계산하고 리턴)
+sift=cv2.xfeatures2d.SIFT_create()  
+    #sift에 대한 함수 제공  
+kp1=sift.detect(img1,None)   
+    #sift의 detect를 사용하여 img1으로부터 kp1반환  
+kp1,des1 = sift.compute(img1,kp1)    
+    #sift의 compute를 사용하여 img1, kp1으로부터 descriptor를 계산하여 kp1과 des1 반환  
+(detectAndCompute(grayimg): grayimg에서 keypoint와 descriptor 한번에 계산하고 리턴)  
 
-matches=flann.knnMatch(des1,des2,k=2) #k=2 2번째로 가까운 결과까지 매칭  
-factor: matches의 각 멤버에서 1순위 매칭결과가 k순위 매칭결과의 factor로 주어진 비율보다 더 가까운 값만을 취한다.
+matches=flann.knnMatch(des1,des2,k=2) #k=2 2번째로 가까운 결과까지 매칭    
+factor: matches의 각 멤버에서 1순위 매칭결과가 k순위 매칭결과의 factor로 주어진 비율보다 더 가까운 값만을 취한다.  
 
 
 cv2.drawKeyPoints(): function which draws the small circles on the locations of keypoints.
