@@ -45,4 +45,17 @@ def correspondence_problem(factor):
     
 correspondence_problem(0.7)
 ```    
-    
+
+
+---------------------------------------------------------------------------------------------------
+pip install opencv-python 설치
+pip install opencv-contrib-python 설치
+
+matches=flann.knnMatch(des1,des2,k=2) #k=2 2번째로 가까운 결과까지 매칭
+factor: matches의 각 멤버에서 1순위 매칭결과가 k순위 매칭결과의 factor로 주어진 비율보다 더 가까운 값만을 취한다.
+
+cv2.drawKeyPoints(): function which draws the small circles on the locations of keypoints.
+cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS: it will draw a circle with size of keypoint and it will even show its orientation.
+
+
+
