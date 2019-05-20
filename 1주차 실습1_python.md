@@ -71,11 +71,11 @@ pip install opencv-python 설치
 pip install opencv-contrib-python 설치   
 
 sift=cv2.xfeatures2d.SIFT_create()  
-+ sift에 대한 함수 제공  
++ sift에 대한 함수 제공    
 kp1=sift.detect(img1,None)   
-+ sift의 detect를 사용하여 img1으로부터 kp1반환  
++ sift의 detect를 사용하여 img1으로부터 kp1반환    
 kp1,des1 = sift.compute(img1,kp1)    
-+ sift의 compute를 사용하여 img1, kp1으로부터 descriptor를 계산하여 kp1과 des1 반환  
++ sift의 compute를 사용하여 img1, kp1으로부터 descriptor를 계산하여 kp1과 des1 반환      
 (detectAndCompute(grayimg): grayimg에서 keypoint와 descriptor 한번에 계산하고 리턴)  
 
 FLANN 매칭을 위해 필요한 인자  
