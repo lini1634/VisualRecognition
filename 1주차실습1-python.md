@@ -57,13 +57,13 @@ __corresponding problem: Detection -> Description -> Matching__
 2.	Description ->특징점 주변 정보추출
 
     SIFT descriptor: Gradient 방향 Histogram -> 가우시안 ->feature vector 추출  
-        장점: scale, 회전, 광도 변환에 불변한 descriptor  
-        단점: 투영에 대한 이론적 대처방안x  
+        + 장점: scale, 회전, 광도 변환에 불변한 descriptor  
+        + 단점: 투영에 대한 이론적 대처방안x  
    
 3.	Matching ->대응점 찾기  
 
     FLANN: Fast Library of Approximate Nearest Neighbors  
-        kd트리: 우선순위 큐와 백트래킹을 이용하여 거리가 가까운 노드부터 탐색
+        + kd트리: 우선순위 큐와 백트래킹을 이용하여 거리가 가까운 노드부터 탐색
 
 ----------------------------------------------------------------------------------------------------
 
