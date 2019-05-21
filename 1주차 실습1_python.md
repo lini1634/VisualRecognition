@@ -42,6 +42,35 @@ def correspondence_problem(factor):
     cv2.waitKey(0)
     cv2.destroyAllwindows()
     
+    #homography to find objects
+    MIN_MATCH_COUNT=10
+    if len(good)>MIN_MATCH_COUNT:
+        src_pts=np.float32([kp1[m.queryIdx].pt for m in good]).reshape(-1,1,2)
+        dst_pts=np.float32([kp2[m.trainIdx].pt for m in good]).reshape(-1,1,2)
+
+        M,mask=cv2.findHomography(src_pts,dst_pts,cv2.RANSAC,5.0)
+        #We have seen that there can be some possible errors while matching which may affect the result. 
+        #To solve this problem, algorithm uses RANSAC or LEAST_MEDIAN (which can be decided by the flags)  
+        matchesMask=mask.ravel().tolist()
+        #ravel(): return a contiguous flattened array, tolist(): transfer tensor to list.
+
+        h,w=img1.shape
+        pts=np.float32([0,0],[0,h-1],[w-1,h-1],[w-1,0]).reshape(-1,1,2)
+        dst=cv2.perspectiveTransform(pts,M)
+
+        img2=cv2.polylines(img2,[np.int32(dst)],True,255,3,cv2.LINE_AA)  
+                          #그릴 대상 이미지, pts[i]위치 배열의 포인트 수,마지막과 처음 포인트 연결
+    else:
+        print("not enough matches",len(good))
+        matchesMask=None
+        
+    #Draw inliers 
+    draw_params=dict(matchColor=(0,255,0),
+                     singlePointColor=(255,0,0),
+                     matchesMask=matchesMask,flags=0)
+    img3=cv2.drawMatches(img1,kp1,img2,kp2,good,None,**draw_params)
+    plt.imshow(img3),plt.show()
+    
 correspondence_problem(0.7)
 ```    
 
@@ -92,4 +121,12 @@ cv2.drawKeyPoints()
 cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS  
 + it will draw a circle with size of keypoint and it will even show its orientation.
 
-
+A Homography(=projective transformation) is a transformation ( a matrix ) that maps the points in one image to the corresponding points in the other image.      
+=> homography는 평면물체의 2D 이미지 변환관계를 설명할 수 있는 가장 일반적인 모델.
+  
+cv2.findHomography(): If we pass the set of points from both the images, it will find the perpective transformation of that object.  
+cv2.perspectiveTransform(): it can be used to find the object.   
+   
+good matches which provide correct estimation are called inliers and remaining are called outliers. cv2.findHomography() returns a mask which specifies the inlier and outlier points.  
+  
+RANSAC(RANdom SAmple Consensus): inlier와 outlier의 샘플집합에서 inlier를 찾는 기법 
