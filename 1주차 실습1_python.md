@@ -1,9 +1,11 @@
 ```
+import numpy as np
 import cv2
+from matplotlib import pyplot as plt
 
 def correspondence_problem(factor):
-    img1=cv2.imread("이미지1 주소",cv2.IMREAD_GRAYSCALE)
-    img2=cv2.imread("이미지2 주소",cv2.IMREAD_GRAYSCALE)
+    img1=cv2.imread("C:\\opencv-2-4-13-6\\correspondence_problem.jpg",cv2.IMREAD_GRAYSCALE)
+    img2=cv2.imread("C:\\opencv-2-4-13-6\\correspondence_problem_img2.jpg",cv2.IMREAD_GRAYSCALE)
     
     sift=cv2.xfeatures2d.SIFT_create()
 
@@ -29,7 +31,7 @@ def correspondence_problem(factor):
         if m.distance<factor*n.distance: 
             good.append(m)
     res=cv2.drawMatches(img1,kp1,img2,kp2,good,res,flags=2)
-    
+
     # 이미지 출력
     img1_2,img2_2=None,None
     img1_2=cv2.drawKeypoints(img1,kp1,img1_2)
@@ -39,39 +41,38 @@ def correspondence_problem(factor):
     cv2.imshow('SIFT1 detect',img1_2)
     cv2.imshow('SIFT2 detect',img2_2)
     cv2.imshow('Feature Matching',res)
-    cv2.waitKey(0)
-    cv2.destroyAllwindows()
     
-    #homography to find objects
+    #box img
     MIN_MATCH_COUNT=10
     if len(good)>MIN_MATCH_COUNT:
         src_pts=np.float32([kp1[m.queryIdx].pt for m in good]).reshape(-1,1,2)
         dst_pts=np.float32([kp2[m.trainIdx].pt for m in good]).reshape(-1,1,2)
 
         M,mask=cv2.findHomography(src_pts,dst_pts,cv2.RANSAC,5.0)
-        #We have seen that there can be some possible errors while matching which may affect the result. 
-        #To solve this problem, algorithm uses RANSAC or LEAST_MEDIAN (which can be decided by the flags)  
         matchesMask=mask.ravel().tolist()
-        #ravel(): return a contiguous flattened array, tolist(): transfer tensor to list.
 
         h,w=img1.shape
-        pts=np.float32([0,0],[0,h-1],[w-1,h-1],[w-1,0]).reshape(-1,1,2)
+        pts=np.float32([[0,0],[0,h-1],[w-1,h-1],[w-1,0]]).reshape(-1,1,2)
         dst=cv2.perspectiveTransform(pts,M)
 
-        img2=cv2.polylines(img2,[np.int32(dst)],True,255,3,cv2.LINE_AA)  
-                          #그릴 대상 이미지, pts[i]위치 배열의 포인트 수,마지막과 처음 포인트 연결
+        img2=cv2.polylines(img2,[np.int32(dst)],True,0,3,cv2.LINE_AA)
     else:
         print("not enough matches",len(good))
         matchesMask=None
         
-    #Draw inliers 
     draw_params=dict(matchColor=(0,255,0),
-                     singlePointColor=(255,0,0),
-                     matchesMask=matchesMask,flags=0)
+                     singlePointColor=None,
+                     matchesMask=matchesMask,flags=2)
     img3=cv2.drawMatches(img1,kp1,img2,kp2,good,None,**draw_params)
-    plt.imshow(img3),plt.show()
+        
+    cv2.imshow("Black box",img3)
     
-correspondence_problem(0.7)
+    
+correspondence_problem(0.5)
+
+
+    
+
 ```    
 
 
